@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reystream</title>
+    <meta name="description" content="Portal elegan untuk jadwal, siaran resmi, dan highlights MotoGP dan Formula 1.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="dark">
+    <header>
+        <div class="container header__nav">
+            <div class="logo">Tongkrongan Balap by Reystream</div>
+            <nav>
+                <ul class="nav__list">
+                    <li><a href="#" class="nav__link active" data-page="home">Home</a></li>
+                    <li><a href="#" class="nav__link" data-page="live">Live</a></li>
+                    <li><a href="#" class="nav__link" data-page="jadwal">Jadwal</a></li>
+                    <li><a href="#" class="nav__link" data-page="highlights">Highlights</a></li>
+                    <li><a href="#" class="nav__link" data-page="teams">Teams</a></li>
+                    <li><a href="#" class="nav__link" data-page="about">About</a></li>
+                </ul>
+            </nav>
+            <div>
+                <button class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+                <select class="lang-toggle" aria-label="Select language">
+                    <option value="id">ID</option>
+                    <option value="en">EN</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Home Page -->
+        <section id="home" class="page">
+            <div class="hero">
+                <h1 class="hero__title">Tongkrongan orang doyan balap cuma disini</h1>
+                <p class="hero__subtitle">Temukan jadwal balapan, highlights, dan akses legal (semoga) tanpa kompromi.</p>
+                <a href="" class="hero__cta" data-page="jadwal">Lihat Jadwal</a>
+            </div>
+            <section>
+                <h2 class="section__title">Quick Links</h2>
+                <div class="quick-links">
+                    <div class="quick-link">
+                        <h3>Live Events</h3>
+                        <p>Lihat event yang sedang berlangsung.</p>
+                        <a href="#" data-page="live">Lihat</a>
+                    </div>
+                    <div class="quick-link">
+                        <h3>Upcoming Races</h3>
+                        <p>Jadwal balapan mendatang.</p>
+                        <a href="#" data-page="jadwal">Lihat</a>
+                    </div>
+                    <div class="quick-link">
+                        <h3>Highlights</h3>
+                        <p>Video terbaik dari balapan.</p>
+                        <a href="#" data-page="highlights">Lihat</a>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h2 class="section__title">Upcoming Races</h2>
+                <div class="carousel" id="upcoming-carousel">
+                    <!-- Populated by JS -->
+                </div>
+            </section>
+        </section>
+
+        <!-- Live Page -->
+        <section id="live" class="page hidden">
+            <h2 class="section__title">Live Events</h2>
+            <div class="live-events" id="live-events">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+        
+        <!-- Player Page -->
+        <section id="player" class="page hidden">
+            <h2 class="section__title">Live Stream Player</h2>
+
+            <video id="video-player" controls autoplay style="width:100%; max-height:60vh; border-radius:10px; background:#000;"></video>
+
+            <!-- HLS Library -->
+            <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+        </section>
+
+
+        <!-- Jadwal Page -->
+        <section id="jadwal" class="page hidden">
+            <h2 class="section__title">Jadwal Balapan</h2>
+            <div class="schedule-filters">
+                <button class="filter-btn active" data-filter="all">Semua</button>
+                <button class="filter-btn" data-filter="motogp">MotoGP</button>
+                <button class="filter-btn" data-filter="f1">F1</button>
+            </div>
+            <div class="schedule-list" id="schedule-list">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+
+        <!-- Highlights Page -->
+        <section id="highlights" class="page hidden">
+            <h2 class="section__title">Highlights</h2>
+            <div class="highlights-grid" id="highlights-grid">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+
+        <!-- Teams Page -->
+        <section id="teams" class="page hidden">
+            <h2 class="section__title">Teams & Drivers</h2>
+            <div class="teams-grid" id="teams-grid">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+
+        <!-- About Page -->
+        <section id="about" class="page hidden">
+            <h2 class="section__title">About</h2>
+            <p>TongkronganBalap adalah portal sakti untuk para pecinta balap, tempat di mana jadwal dan tautan resmi berkeliaran bebas seperti kucing malam Minggu.
+                Kami tidak menyediakan streaming ilegal—kami bahkan takut sama buffering.
+                Jadi kalau cari tontonan gelap-gelapan, maaf, server kami langsung kabur pakai knalpot racing.
+                TongkronganBalap cuma menyuguhkan info resmi, rapi, dan tersertifikasi oleh “Dewan Balap Antar Galaksi”</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer__links">
+            <a href="#" class="footer__link">Broadcaster Segera Resmi</a>
+            <a href="#" class="footer__link">Terms</a>
+            <a href="#" class="footer__link">Privacy</a>
+        </div>
+        <p class="disclaimer">Seluruh link dan embed di sini adalah milik pemegang lisensi resmi.
+                Kami hanya pengunjung kos yang numpang WiFi.
+                Kalau mau nonton lengkap, silakan ke penyedia resmi—mereka punya kursi empuk dan legalitas yang tidak diragukan.
+                Dilarang keras mengunggah konten berhak cipta tanpa izin,
+                karena kalau ketahuan, kami akan berubah menjadi sapu terbang dan kabur ke dimensi lain..</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
