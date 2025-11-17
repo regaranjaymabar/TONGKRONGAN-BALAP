@@ -261,14 +261,14 @@ async function blobBypassAttempt(url) {
 // ==========================================
 // 1. UBAH INI KE DOMAIN HOSTING KAMU
 // ==========================================
-const proxyURL = "https://Tongkrongan balap.com/proxy.php?url=";
+const proxyURL = "https://Tongkronganbalap.com/proxy.php?url=";
 
 // ==========================================
 // 2. LINK STREAM YANG MAU DIPUTAR
 // ==========================================
 const streamURL = "https://cph-msl.akamaized.net/hls/live/2000341/test/master.m3u8";
 
-const video = document.getElementById("videoPlayer");
+const video = document.getElementById("video-player");
 
 // ==========================================
 // Fungsi play via PROXY
@@ -318,7 +318,7 @@ function playDirect() {
 // ==========================================
 // Start
 // ==========================================
-playDirect();
+//playDirect();
 
 
 /* ============================================================
@@ -365,3 +365,61 @@ async function init() {
 }
 
 init();
+
+
+/* ============================================================
+   OBS PLAYER MODE — SUPAYA BISA DIPAKAI DI OBS
+=============================================================== */
+
+function playForOBS(streamUrl) {
+    const video = document.getElementById("video-player");
+
+    // Jika elemen videonya tidak ada → stop
+    if (!video) {
+        console.error("Video element #videoPlayer tidak ditemukan");
+        return;
+    }
+
+    // Link proxy kamu
+    const proxyURL = "https://Tongkronganbalap.com/proxy.php?url=";
+
+    // Bikin dua versi: direct + proxy
+    const directURL = streamUrl;
+    const proxiedURL = proxyURL + encodeURIComponent(streamUrl);
+
+    console.log("OBS mode: mencoba DIRECT dulu:", directURL);
+
+    if (Hls.isSupported()) {
+        const hls = new Hls();
+
+        // Jika gagal → otomatis switch ke proxy
+        hls.on(Hls.Events.ERROR, function (_, error) {
+            console.warn("Direct gagal:", error.details);
+            console.log("Pindah ke MODE PROXY:", proxiedURL);
+
+            const hls2 = new Hls();
+            hls2.loadSource(proxiedURL);
+            hls2.attachMedia(video);
+        });
+
+        // Coba direct dulu
+        try {
+            hls.loadSource(directURL);
+            hls.attachMedia(video);
+        } catch {
+            console.warn("Direct load error → langsung proxy");
+            const hls2 = new Hls();
+            hls2.loadSource(proxiedURL);
+            hls2.attachMedia(video);
+        }
+
+    } else {
+        // Untuk Safari / OBS native player
+        video.src = directURL;
+
+        video.onerror = () => {
+            console.log("Native direct fail → ganti proxy");
+            video.src = proxiedURL;
+        };
+    }
+}
