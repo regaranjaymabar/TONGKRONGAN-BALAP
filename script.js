@@ -17,29 +17,116 @@ const dummyData = {
             status: 'live', 
             leaderboard: ['Rider1 - 1st', 'Rider2 - 2nd'],
             streamUrl: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8'
-        }
+        },
+        { 
+            title: 'epwang', 
+            status: 'live', 
+            leaderboard: ['Rider1 - 1st', 'Rider2 - 2nd'],
+            streamUrl: 'https://cb.cdnid.win/racevalencia25/v360p/gp_152.json'
+        },
     ],
     schedule: [
-        { title: 'MotoGP Indonesia', date: '2025-10-15', country: 'Indonesia', type: 'motogp' },
+        { title: 'Pre Season Test', date: '2025-11-18', country: 'Valencia spanyol', type: 'motogp' },
         { title: 'F1 Brazil', date: '2025-10-22', country: 'Brazil', type: 'f1' }
     ],
     highlights: [
         { 
-            title: 'MotoGP Highlight', 
-            thumbnail: 'data:image/svg+xml;base64,...', 
-            description: 'Best moments from the race.' 
+            title: 'Highlight MotoGP Valencia', 
+            thumbnail: 'https://media.gettyimages.com/id/2246434260/photo/aprilia-racing-teams-italian-motogp-rider-marco-bezzecchi-celebrates-on-the-podium-after.jpg?s=612x612&w=0&k=20&c=2bELk9oaT74vITwvhNCyTuFhsdEyMDIK_06RYLZYLv8=', 
+            description: 'Best moments from the race.',
+            videoUrl:"https://youtu.be/_MNlGAK69AE?si=oL1WnvoCGk6IT47S",
+        },
+        { 
+            title: 'Highlight MotoGP Algarve', 
+            thumbnail: 'https://media.gettyimages.com/id/2245298939/photo/lagoa-algarve-portugal-during-the-qatar-airways-grand-prix-of-portugal-race-day-at-autodromo.jpg?s=612x612&w=0&k=20&c=t95KdWQBxI4yleHnT9pL7oWeyE5p-8196ga-fyhtVM0=', 
+            description: 'Best moments from the race.',
+            videoUrl:"https://youtu.be/EbJMANarkcQ?si=1mzksTVFX9wJs6HJ"
+        },
+        { 
+            title: 'Highlight MotoGP Sepang ', 
+            thumbnail: 'https://media.gettyimages.com/id/2243360149/photo/kuala-lumpur-malaysia-alex-marquez-of-spain-riding-the-bk8-gresini-racing-ducati-takes.jpg?s=612x612&w=0&k=20&c=4mTIk5olEvLFOa3EjdNxmE0R7PHRucj0eWa48o9ZqD4=', 
+            description: 'Best moments from the race.',
+            videoUrl:"https://youtu.be/h6QFIj_uBN4?si=xi6uNtduElaZ5aoI" 
+        },
+        { 
+            title: 'Highlight MotoGP Philip Island', 
+            thumbnail: 'https://media.gettyimages.com/id/2241823412/photo/phillip-island-grand-prix-circuit-cowes-victoria-australia-number-25-trackhouse-racing-rider.jpg?s=612x612&w=0&k=20&c=YVoEwttpOkfOAZNWPwK6E_WYps9MaLN6f6vtnBmAkn8=', 
+            description: 'Best moments from the race.',
+            videoUrl:"https://youtu.be/wIrSzozUjP0?si=LwxUJJ5JkAjmEfRx" 
+        },
+        { 
+            title: 'Highlight MotoGP Mandalika', 
+            thumbnail: 'https://media.gettyimages.com/id/2238896608/photo/topshot-bk8-gresini-racing-motogp-teams-spanish-motogp-rider-fermin-aldeguer-celebrates-on.jpg?s=612x612&w=0&k=20&c=JTmm0zmgP0hAeWdmlS4qDFtvUFUbxo7ySFU2Bw_yhU0=', 
+            description: 'Best moments from the race.',
+            videoUrl:"https://youtu.be/0sHnV_d10NQ?si=7nE9x7tEIMzFFXAH" 
+        },
+        { 
+            title: 'Highlight MotoGP Motegi', 
+            thumbnail: 'https://media.gettyimages.com/id/2237824393/photo/motegi-japan-marc-marquez-of-spain-riding-the-lenovo-ducati-celebrates-winning-the-world.jpg?s=612x612&w=0&k=20&c=xaCCvwiId1Yzl1rg3y_3qigqzM0f1ILbWccKmMfJ4wA=', 
+            description: 'Best moments from the race.',
+            videoUrl:"https://youtu.be/yKzEZsyVjjo?si=4rlrU1CEQe_R4JNp" 
+        },
+        { 
+            title: 'Highlight MotoGP Misano', 
+            thumbnail: 'https://media.gettyimages.com/id/2234820647/photo/marc-marquez-from-spain-rides-the-ducati-desmosedici-gp25-of-the-ducati-lenovo-team-and-shows.jpg?s=612x612&w=0&k=20&c=QaBOy-q_LQN0JkhsIb5eXLxrQuclZQ-AQxtuzhZlFsc=', 
+            description: 'Best moments from the race.',
+            videoUrl:"https://youtu.be/BLsG1SneHKc?si=yh2krLVaaJXZOp2T" 
+        },
+        { 
+            title: 'Highlight MotoGP Catalunya  ', 
+            thumbnail: 'https://media.gettyimages.com/id/2234138989/photo/barcelona-spain-alex-marquez-of-spain-riding-the-bk8-gresini-racing-ducati-celebrates-victory.jpg?s=612x612&w=0&k=20&c=HrBh7x4iNR-Lll66Uex-1tBWcuQD26inxR513xjRdLY=', 
+            description: 'Best moments from the race.',
+            videoUrl:"https://youtu.be/Gz5DKTmm5Ps?si=xdzYwfWDxVXMDr-D" 
+        },
+        { 
+            title: 'tes live tvone  ', 
+            thumbnail: 'https://i.pinimg.com/736x/2a/e4/c8/2ae4c8978c167465bfcd1291c88079b7.jpg', 
+            description: 'TES.',
+            videoUrl:"https://youtu.be/yNKvkPJl-tg" 
         }
     ],
     teams: [
         { 
-            name: 'Yamaha', 
-            driver: 'Valentino Rossi', 
-            number: 46, 
-            nationality: 'Italy', 
-            photo: 'data:image/svg+xml;base64,...' 
+            name: 'Ducati', 
+            driver: 'Marc Marquez', 
+            number: 93, 
+            nationality: 'Spanyol', 
+            photo: 'https://resources.motogp.pulselive.com/photo-resources/2025/02/10/db39c323-167c-4a23-b3ae-75cfe6b06d95/jws78ATZ.png?height=700&width=900',
         }
     ]
 };
+
+function extractYouTubeID(url) {
+    const pattern = /(?:youtube\.com\/.*v=|youtu\.be\/)([^&#?/]+)/;
+    const match = url.match(pattern);
+    return match ? match[1] : null;
+}
+
+function playYouTube(url) {
+    const videoId = extractYouTubeID(url);
+    if (!videoId) {
+        alert("Link YouTube tidak valid!");
+        return;
+    }
+
+    const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+
+    // ganti video-player menjadi iframe
+    document.getElementById("video-player").outerHTML = `
+        <iframe id="video-player"
+            width="100%" 
+            height="100%" 
+            src="${embedUrl}" 
+            frameborder="0" 
+            allow="autoplay; encrypted-media"
+            allowfullscreen>
+        </iframe>
+    `;
+
+    // buka halaman player
+    showPage("player");
+}
+
 
 /* ============================================================
    LOAD DATA
@@ -125,13 +212,14 @@ function renderSchedule(data, filter="all") {
 function renderHighlights(data) {
     document.getElementById("highlights-grid").innerHTML =
         data.highlights.map(h => `
-            <div class="highlight-card" onclick="openHighlight('${h.title}')">
+            <div class="highlight-card" onclick="playYouTube('${h.videoUrl}')">
                 <img src="${h.thumbnail}" loading="lazy">
                 <h3>${h.title}</h3>
                 <p>${h.description}</p>
             </div>
         `).join("");
 }
+
 
 function renderTeams(data) {
     document.getElementById("teams-grid").innerHTML =
@@ -423,3 +511,4 @@ function playForOBS(streamUrl) {
         };
     }
 }
+
